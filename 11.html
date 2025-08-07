@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ColorMood</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      transition: background-color 0.5s;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 ColorMood</h1>
+  <p>Click a mood to change the background color:</p>
+  <button onclick="setMood('happy')">Happy 😊</button>
+  <button onclick="setMood('calm')">Calm 😌</button>
+  <button onclick="setMood('sad')">Sad 😢</button>
+
+  <script>
+    function setMood(mood) {
+      let color;
+      if (mood === 'happy') color = '#ffeb3b';
+      else if (mood === 'calm') color = '#80deea';
+      else if (mood === 'sad') color = '#90a4ae';
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>
